@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="js/jquery.inview.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+    <h1>jQueryを練習しよう</h1>
+    <div class="healtyBody">   
+    </div>
+    <script>
+        for(let i = 0; i < 30; i++){
+            let top_rand = Math.random()*100;
+            let transiton_rand = Math.random()*5;
+            let fish_rand = Math.random()*10;
+            let fish_no;
+            let fish_width;
+            
+            switch(true){
+                case fish_rand < 7:
+                    fish_no = 1;
+                    fish_width = "80px";
+                    break;
+                case fish_rand < 8:
+                    fish_no = 2;
+                    fish_width = "120px";
+                    break;
+                case fish_rand < 9:
+                    fish_no = 3;
+                    fish_width = "150px";
+                    break;
+                case fish_rand < 9.5:
+                    fish_no = 4;
+                    fish_width = "200px";
+                    break;
+                case fish_rand < 9.8:
+                    fish_no = 5;
+                    fish_width = "300px";
+                    break;
+                default:
+                    fish_width = "500px";
+                    fish_no = 6;
+            }
+            $(".healtyBody").append(`<img src="img/fish${fish_no}.png" style="top:${top_rand}%;animation-delay:${transiton_rand}s;width:${fish_width}">`);
+        }
+        $('.healtyBody').on('inview', function(event,isInView) {
+            if(isInView){
+                $("img").toggleClass("genki");
+            }
+        });
+    </script>
+</body>
+</html>

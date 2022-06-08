@@ -1,0 +1,100 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+caption,tfoot, thead{
+   border: 0;
+   font-family: inherit;
+   font-size: 100%;
+   font-style: inherit;
+   font-style: inherit;
+   font-weight: inherit;
+   margin: 0;
+   outline: 0;
+   padding: 0;
+   vertical-align: baseline;
+   list-style:none;
+   text-decoration:none;
+}
+*, *:before, *:after {
+   -webkit-box-sizing: border-box;
+   -o-box-sizing: border-box;
+   -ms-box-sizing: border-box;
+   box-sizing: border-box;
+}
+p,a,h1,h2,h3,h4,h5{color:black}
+p{line-height:200%}
+button,
+input[type='submit'] {
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+   padding: 0;
+   border: none;
+   outline: none;
+   background: transparent;
+cursor: pointer;
+}
+table{
+   border-collapse: collapse;
+   border-spacing: 0;
+}
+body{
+    background-image: url("img/22716475.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:200vh
+}
+.healtyBody{
+    margin:100vh 0;
+    padding:200px 0;
+    position: relative;
+    text-align: center;
+}
+h1{
+    text-align: center;
+    margin: 120px auto;
+    font-size: 30px;
+    width: 500px;
+    padding: 30px;
+    background: #00000070;
+    color: white;
+    border-radius: 10px;
+}
+h2{
+    font-size:60px;
+    font-weight: bold;
+    color: #7a7979;
+}
+img{
+    position: absolute;
+    left:-40%;
+    font-size:30px;
+    width:250px;
+    color:white;
+    animation:genkidayo 3s cubic-bezier(0, 0.77, 0.92, 0.16);
+    transform: scale(-1,1);
+}
+img.genki{
+    animation:genki 3s cubic-bezier(0, 0.77, 0.92, 0.16);
+    transform: scale(1,1);
+}
+@keyframes genki{
+    0%{
+        left:-40%
+    }
+    100%{
+        left:100%;
+    }
+}
+@keyframes genkidayo{
+    0%{
+        left:100%;
+    }
+    100%{
+        left:-40%;
+    }
+}
